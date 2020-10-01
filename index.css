@@ -1,0 +1,82 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  display: flex;
+}
+
+#container {
+  height: 100vh;
+}
+
+#banner {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#clock {
+  display: none;
+  text-decoration: none;
+  color: black;
+  font-size: 100px;
+  margin-right: 45px;
+  margin-top: 120px;
+}
+
+#current-value {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#current-value-text {
+  font-size: 150px;
+  display: none;
+}
+
+#reset-button {
+  display: none;
+  height: 40px;
+  padding: 5px;
+  align-items: center;
+  text-decoration: none;
+  background: white;
+  border: 2px solid black;
+  color: black;
+  font-weight: bold;
+}
+
+#message {
+  font-size: 150px;
+}
+
+#message2 {
+  font-size: 35px;
+}
+
+#message-button {
+  height: 40px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background: white;
+  border: 2px solid black;
+  color: black;
+  font-weight: bold;
+}
+
+#typed-value {
+  height: 30%;
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
