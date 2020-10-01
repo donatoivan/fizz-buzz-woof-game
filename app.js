@@ -17,14 +17,13 @@ class FizzBuzzWoof {
   }
   // print the current value of number obj to DOM
   renderCurrentValue() {
-    const textArea = document.getElementById("current-value-text");
-    const clockEl = document.getElementById("clock");
+    const elements = elementObj();
 
     if (this.gameRunning == false) {
       messenger.gameOver();
     } else {
-      textArea.innerHTML = this.currentValue;
-      clockEl.innerHTML = clock.countdownValue;
+      elements.textArea.innerHTML = this.currentValue;
+      elements.clockEl.innerHTML = clock.countdownValue;
     }
   }
 

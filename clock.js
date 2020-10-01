@@ -24,13 +24,13 @@ class Clock {
   }
 
   renderClock() {
-    const clockEl = document.getElementById("clock");
+    const elements = elementObj();
 
     if (game.gameRunning === false) {
-      clockEl.style.display = "none";
+      elements.clockEl.style.display = "none";
     } else {
-      clockEl.style.display = "block";
-      clockEl.innerHTML = this.countdownValue;
+      elements.clockEl.style.display = "block";
+      elements.clockEl.innerHTML = this.countdownValue;
     }
   }
 

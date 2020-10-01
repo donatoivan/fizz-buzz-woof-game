@@ -1,4 +1,4 @@
-let textDisplayDiv = document.getElementById("typed-value");
+const elements = elementObj();
 let typedArray = [];
 // listens out for keyboard types
 window.addEventListener("keydown", (e) => {
@@ -16,23 +16,17 @@ window.addEventListener("keydown", (e) => {
   ) {
     enterValue();
   }
-  textDisplayDiv.innerHTML = typedArray.join("");
+  elements.textDisplayDiv.innerHTML = typedArray.join("");
 });
 
-const button = document.getElementById("message-button");
 //listens out for button press to start game
-button.addEventListener("click", (e) => {
-  const messageH1 = document.getElementById("message");
-  const messageH2 = document.getElementById("message2");
-  const button = document.getElementById("message-button");
-  const currentValueText = document.getElementById("current-value-text");
-
+elements.messageButton.addEventListener("click", (e) => {
   clock.renderClock();
   clock.timer();
-  currentValueText.style.display = "block";
-  messageH1.style.display = "none";
-  messageH2.style.display = "none";
-  button.style.display = "none";
+  elements.currentValueText.style.display = "block";
+  elements.messageH1.style.display = "none";
+  elements.messageH2.style.display = "none";
+  elements.messageButton.style.display = "none";
   messenger.toggleMessage();
 });
 
