@@ -2,36 +2,36 @@ class Messenger {
   message = true;
   messageIndex = 0;
 
-  gameOver() {
-    const elements = elementObj();
+  constructor(elements) {
+    this.elements = elements;
+  }
 
+  gameOver() {
     this.message = true;
-    elements.textArea.textContent = "Game Over";
-    elements.correctValue.style.display = "block";
-    elements.correctValue.textContent =
+    this.elements.textArea.textContent = "Game Over";
+    this.elements.correctValue.style.display = "block";
+    this.elements.correctValue.textContent =
       clock.noTime === true
         ? `You ran out of time. The correct answer was '${game.currentValue}'.`
-        : `You typed '${elements.typedValue.textContent}'. The correct answer was '${game.currentValue}'.`;
+        : `You typed '${this.elements.typedValue.textContent}'. The correct answer was '${game.currentValue}'.`;
 
-    elements.typedValue.style.display = "none";
-    elements.resetButton.style.display = "flex";
-    elements.clockEl.style.display = "none";
+    this.elements.typedValue.style.display = "none";
+    this.elements.resetButton.style.display = "flex";
+    this.elements.clockEl.style.display = "none";
     clock.resetTimer();
   }
 
   //prints message to screen
   messages() {
-    const elements = elementObj();
-
     if (this.message === true) {
-      elements.currentValueText.style.display = "none";
-      elements.messageH1.textContent = messageArray[this.messageIndex];
-      elements.messageH1.style.display = "block";
-      elements.messageH2.textContent = messageArrayTwo[this.messageIndex];
-      elements.messageH2.style.display = "block";
-      elements.messageButton.textContent = "Click to start";
-      elements.messageButton.style.display = "flex";
-      elements.clockEl.style.display = "none";
+      this.elements.currentValueText.style.display = "none";
+      this.elements.messageH1.textContent = messageArray[this.messageIndex];
+      this.elements.messageH1.style.display = "block";
+      this.elements.messageH2.textContent = messageArrayTwo[this.messageIndex];
+      this.elements.messageH2.style.display = "block";
+      this.elements.messageButton.textContent = "Click to start";
+      this.elements.messageButton.style.display = "flex";
+      this.elements.clockEl.style.display = "none";
       this.messageIndex += 1;
     }
   }
@@ -43,4 +43,4 @@ class Messenger {
   }
 }
 
-const messenger = new Messenger();
+const messenger = new Messenger(elementObj());

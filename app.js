@@ -4,8 +4,9 @@ class FizzBuzzWoof {
   guess;
   currentValue = 0;
   level = 1;
-  constructor(numberObj) {
+  constructor(numberObj, elements) {
     this.numberObj = numberObj;
+    this.elements = elements;
   }
   // increments number obj index to show next value
   nextValue() {
@@ -112,6 +113,6 @@ class FizzBuzzWoof {
   }
 }
 
-const game = new FizzBuzzWoof(countObj);
+const game = new FizzBuzzWoof(countObj, elementObj());
 
 game.run();

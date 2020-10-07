@@ -6,6 +6,10 @@ class Clock {
   countdownLevel = 7;
   noTime;
 
+  constructor(elements) {
+    this.elements = elements;
+  }
+
   timer() {
     this.timeoutId = setInterval(() => {
       this.checkTimer();
@@ -24,13 +28,11 @@ class Clock {
   }
 
   renderClock() {
-    const elements = elementObj();
-
     if (game.gameRunning === false) {
-      elements.clockEl.style.display = "none";
+      this.elements.clockEl.style.display = "none";
     } else {
-      elements.clockEl.style.display = "block";
-      elements.clockEl.textContent = this.countdownValue;
+      this.elements.clockEl.style.display = "block";
+      this.elements.clockEl.textContent = this.countdownValue;
     }
   }
 
@@ -44,4 +46,4 @@ class Clock {
   }
 }
 
-const clock = new Clock();
+const clock = new Clock(elementObj());
