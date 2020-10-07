@@ -30,7 +30,7 @@ class Clock {
       elements.clockEl.style.display = "none";
     } else {
       elements.clockEl.style.display = "block";
-      elements.clockEl.innerHTML = this.countdownValue;
+      elements.clockEl.textContent = this.countdownValue;
     }
   }
 

@@ -22,8 +22,8 @@ class FizzBuzzWoof {
     if (this.gameRunning == false) {
       messenger.gameOver();
     } else {
-      elements.textArea.innerHTML = this.currentValue;
-      elements.clockEl.innerHTML = clock.countdownValue;
+      elements.textArea.textContent = this.currentValue;
+      elements.clockEl.textContent = clock.countdownValue;
     }
   }
 

@@ -16,7 +16,7 @@ window.addEventListener("keydown", (e) => {
   ) {
     enterValue();
   }
-  elements.textDisplayDiv.innerHTML = typedArray.join("");
+  elements.textDisplayDiv.textContent = typedArray.join("");
 });
 
 //listens out for button press to start game
